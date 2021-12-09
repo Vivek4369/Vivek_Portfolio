@@ -25,7 +25,9 @@ h1,h2,h3{
     margin: 0;
 }
 
-
+.section__head {
+    font-size: 40px;
+}
 .section__title{
     margin-bottom : .25em;
     font-size: 45px;
@@ -42,7 +44,11 @@ h1,h2,h3{
 
 .nav__head {
     float: left;
-    font-size: 35px;
+    font-size: 30px;
+    
+}
+.nav__head h2{
+    color :rgb(46, 46, 46)
 }
 .nav__list {
     float: right;
@@ -123,13 +129,22 @@ footer {
     padding: 2em;
 }
 
+.footer__info {
+
+}
+
 .social_list {
     position :relative;
     padding-bottom: 30px;
 }
 
 .social__link {
-    margin: 1em;
+
+    padding: 10px;
     text-decoration: none;
-    background-color: transparent;
+    color: black;
+}
+
+.social__link:hover{
+    color: white;
 }
