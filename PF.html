@@ -5,9 +5,13 @@
         <title>Vivek</title>
         <meta name="viewpot" content="width=device-width, initial-scale=1.0">
 
-        <link ref="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
     </head>
+
+
     <body>
+
         <header>
             <div class="logo">
                 <img src="#" alt="">
@@ -17,20 +21,25 @@
                 <span class="hamburger"></span>
             </button>
             <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">My work</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
-                </ul>
+                <div class= "nav__head">
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="nav__list">
+                    <a href="#home" class="nav__link">Home</a>
+                    <a href="#about" class="nav__link">About me</a>
+                    <a href="#work" class="nav__link">My work</a>
+                    <a href="#" class="nav__link">contact</a>
+                    <a href="#footer" class="nav__link">Links</a>
+                </div>
             </nav>
         </header>
 
         <section class="intro" id="home">
-            <hi class="section__title">
-                Hi, I am <string>Vivek</string>
-            </hi>
-            <img src="img/Vivek.jpg" alt="a picture of Vivek">
+            <img src="img/Vivek_crop.png" alt="a picture of Vivek">
+            <h1 class="section__title">
+                Hi, I am <br><strong>Vivek</strong>
+            </h1>
+            
         </section>
 
         <section class="about_me" id="about">
@@ -38,8 +47,7 @@
             <p class="section__about"></p>
 
             <div class="about_me">
-                <p></p>
-                <p></p>
+                <p>I'm Vivek, currently doing B.Tech in Computer Science from Jaypee university of Engineering and Technology (JUET).</p>
             </div>
 
             <img src="#" alt="">
@@ -51,18 +59,32 @@
             <p class="section__subtitle"></p>
         </section>
 
-        <footer>
-            <a href="#" class="footer_link"></a>
-            <ul class="social_list">
-                <li class="social_list--item"><a class="social_list--link"
-                    href="#">a</a></li>
-                <li class="social_list--item"><a class="social_list--link"
-                    href="#">b</a></li>
-                <li class="social_list--item"><a class="social_list--link"
-                    href="#">c</a></li>
-                <li class="social_list--item"><a class="social_list--link"
-                    href="#">d</a></li>
-            </ul>
+        <footer id = "footer">
+            <div class="footer_info">
+                <h2>Vivek</h2>
+                <h3>Kullu, Himachal Pradesh, India</h3>
+                <div class= "footer__info">
+                    <p>+919882860531</p>
+                    <p>Kv15386@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="social_list">
+                
+                
+                <a class="social__link" href="https://www.instagram.com/viv_ek43/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social__link" href="https://www.facebook.com/kumar.vivek.9083">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="social__link" href="https://www.youtube.com/channel/UCFPUDgD3yBxTYTFj-NuPlYA">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="social__link" href="https://www.hackerrank.com/Vivek4369">
+                    <i class="fab fa-hackerrank"></i>
+                </a>
+            </div>
         </footer>
 
     </body>
