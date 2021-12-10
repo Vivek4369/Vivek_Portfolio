@@ -2,7 +2,7 @@
 body{
     background-color: #fff;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
 
 }
 section {
@@ -18,6 +18,11 @@ strong {
 img{
     display: block;
     max-width: 100%;
+    transition: transform .2s;
+}
+
+img:hover{
+    transform : scale(1.1);
 }
 
 h1,h2,h3{
@@ -27,6 +32,7 @@ h1,h2,h3{
 
 .section__head {
     font-size: 40px;
+    padding: .7em;
 }
 .section__title{
     margin-bottom : .25em;
@@ -48,7 +54,7 @@ h1,h2,h3{
     
 }
 .nav__head h2{
-    color :rgb(46, 46, 46)
+    color :rgba(46, 46, 46, 0.555)
 }
 .nav__list {
     float: right;
@@ -72,16 +78,13 @@ h1,h2,h3{
         "img subtitle";
     }
 
-    .intro__img{
-        grid-area: img;
-        min-width: 250px;
-    }
+    
 }
 
 .nav {
     align-content: center;
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    padding: 1em;
     height:40px;
     line-height: 40px;
     display: block;
@@ -89,26 +92,47 @@ h1,h2,h3{
 .nav__list {
     list-style: none;
     display: block;
+    transition : transform .2s;
 }
 
 .nav__link{
     color:rgba(0,0,0,.5);
     text-decoration: none;
-    margin : 1em;
+    padding : 1em;
+    transition : transform .2s;
 }
 .nav__link:hover {
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    transform: scale(1.2);
 }
 
 
 /* ABOUT ME */
 
 .about_me {
-    position : relative;
-    
+    position : relative;   
 }
 
 
+
+@media(min-width:600px){
+    .about_me{
+        display: grid;
+        width: content;
+        max-width: 80%;
+        position: relative;
+        margin: 0 auto;
+        grid-template-areas:
+        "img title"
+        "img subtitle";
+    }
+    .about_me_img{
+        grid-area: img;
+        min-width: 20%;
+
+    }
+    
+}
 
 
 
@@ -144,7 +168,11 @@ footer {
     text-decoration: none;
     color: black;
 }
+.fab {
+    transition : transform .2s;
+}
 
-.social__link:hover{
+.fab:hover{
     color: white;
+    transform: scale(1.5);
 }
