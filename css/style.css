@@ -18,6 +18,7 @@ strong {
 img{
     display: block;
     max-width: 100%;
+    min-width:200px;
     transition: transform .2s;
 }
 
@@ -114,6 +115,10 @@ h1,h2,h3{
     font-size:25px;
     padding: 20%;
     padding-bottom:1em;
+    position: relative;
+}
+.about_text:hover{
+    color:rgb(36, 36, 36)
 }
 
 
@@ -123,19 +128,20 @@ h1,h2,h3{
 .my_skills {
     padding:20%;
     place-items: center;
+    position: relative;
 }
 .skill_title {
     text-align: center;
     font-size: 30px;
     color:rgba(0, 0, 0, 0.541);
     margin-bottom: 1em;
+    position: relative;
 }
 .skill_container {
     
     align-items: center;
     width: 100%;
-    min-width: 600px;
-    position: realtive;
+    position: relative;
 }
 .skill_name {
     margin:0.5em;
@@ -154,6 +160,11 @@ h1,h2,h3{
 .sbar{
     height:1em;
     border-radius: 1em;
+    transition: transform .2s;
+}
+.sbar:hover{
+    transform: scale(1.05);
+    background-color:rgba(0, 0, 0, 0.9);
 }
 
 .c{ background-color: rgba(0, 0, 0, 0.7);  width:50%}
