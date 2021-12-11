@@ -1,8 +1,8 @@
 
 body{
-    background-color: #fff;
+    background-color: rgb(255, 247, 238);
     margin: 0;
-    font-family: sans-serif;
+    font-family: Verdana, sans-serif;
 
 }
 section {
@@ -34,14 +34,11 @@ h1,h2,h3{
     font-size: 40px;
     padding: .7em;
 }
-.section__title{
-    margin-bottom : .25em;
-    font-size: 45px;
-}
 
 
 
 /* TOP */
+
 
 
 .nav {
@@ -110,35 +107,59 @@ h1,h2,h3{
 /* ABOUT ME */
 
 .about_me {
-    position : relative;   
+    position : relative; 
+}
+.about_me_info{
+    color:rgb(77, 77, 77);
+    font-size:25px;
+    padding: 20%;
+    padding-bottom:1em;
 }
 
 
 
-@media(min-width:600px){
-    .about_me{
-        display: grid;
-        width: content;
-        max-width: 80%;
-        position: relative;
-        margin: 0 auto;
-        grid-template-areas:
-        "img title"
-        "img subtitle";
-    }
-    .about_me_img{
-        grid-area: img;
-        min-width: 20%;
+/*SKILLS*/
 
-    }
+.my_skills {
+    padding:20%;
+    place-items: center;
+}
+.skill_title {
+    text-align: center;
+    font-size: 30px;
+    color:rgba(0, 0, 0, 0.541);
+    margin-bottom: 1em;
+}
+.skill_container {
     
+    align-items: center;
+    width: 100%;
+    min-width: 600px;
+    position: realtive;
+}
+.skill_name {
+    margin:0.5em;
+}
+.per {
+    float:right;
 }
 
+.bar {
+    position:relative;
+    width: 100%;
+    background-color: #ddd;
+    height: 1em;
+    border-radius: 1em;
+  }
+.sbar{
+    height:1em;
+    border-radius: 1em;
+}
 
-
-
-
-
+.c{ background-color: rgba(0, 0, 0, 0.7);  width:50%}
+.python{ background-color: rgba(0, 0, 0, 0.7);  width:40%}
+.html{ background-color: rgba(0, 0, 0, 0.7);  width:45%}
+.css{ background-color: rgba(0, 0, 0, 0.7);  width:35%}
 
 
 /* FOOTER */
@@ -147,15 +168,13 @@ footer {
     background-color: rgba(100, 99, 99, 0.432);
     text-align: center;
     position: relative;
+    padding-bottom: 2em;
 }
 
 .footer_info {
     padding: 2em;
 }
 
-.footer__info {
-
-}
 
 .social_list {
     position :relative;
@@ -172,7 +191,7 @@ footer {
     transition : transform .2s;
 }
 
-.fab:hover{
+.social__link:hover .fab{
     color: white;
     transform: scale(1.5);
 }
