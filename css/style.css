@@ -19,7 +19,8 @@ img{
     display: block;
     max-width: 100%;
     min-width:200px;
-    transition: transform .2s;
+    border-radius: 1em;
+    transition: transform .3s;
 }
 
 img:hover{
@@ -116,6 +117,9 @@ h1,h2,h3{
     padding: 20%;
     padding-bottom:1em;
     position: relative;
+}
+.about_text {
+    transition: transform .2s;
 }
 .about_text:hover{
     color:rgb(36, 36, 36)
