@@ -20,11 +20,11 @@ img{
     max-width: 100%;
     min-width:200px;
     border-radius: 1em;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 
 img:hover{
-    transform : scale(1.1);
+    transform : scale(1.05);
 }
 
 h1,h2,h3{
@@ -66,7 +66,7 @@ h1,h2,h3{
     position:relative;
 }
 
-@media ( min-width: 600px) {
+@media ( min-width: 500px) {
     .intro {
         display: grid;
         max-width: 50%;
@@ -98,11 +98,10 @@ h1,h2,h3{
     color:rgba(0,0,0,.5);
     text-decoration: none;
     padding : 1em;
-    transition : transform .2s;
+    transition : color .3s;
 }
 .nav__link:hover {
     color: rgb(0, 0, 0);
-    transform: scale(1.2);
 }
 
 
@@ -119,7 +118,7 @@ h1,h2,h3{
     position: relative;
 }
 .about_text {
-    transition: transform .2s;
+    transition: color .3s;
 }
 .about_text:hover{
     color:rgb(36, 36, 36)
@@ -164,7 +163,7 @@ h1,h2,h3{
 .sbar{
     height:1em;
     border-radius: 1em;
-    transition: transform .2s;
+    transition: transform .4s,background-color .4s;
 }
 .sbar:hover{
     transform: scale(1.05);
@@ -206,10 +205,10 @@ footer {
     color: black;
 }
 .fab {
-    transition : transform .2s;
+    transition : transform .4s, color .4s;
 }
 
 .social__link:hover .fab{
     color: white;
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
