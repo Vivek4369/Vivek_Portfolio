@@ -1,8 +1,9 @@
 
 body{
-    background-color: rgb(255, 247, 238);
+    background-color: #ffffff;
     margin: 0;
     font-family: Verdana, sans-serif;
+    transition: 1s;
 
 }
 section {
@@ -15,16 +16,21 @@ strong {
     font-size: 60px;
 }
 
+.wrapper{
+    padding : 30px;
+}
+
 img{
     display: block;
     max-width: 100%;
     min-width:200px;
     border-radius: 1em;
-    transition: transform .5s;
+    transition: .5s;
 }
 
 img:hover{
-    transform : scale(1.05);
+    transition : transform 1.5s;
+    
 }
 
 h1,h2,h3{
@@ -123,6 +129,47 @@ h1,h2,h3{
 .about_text:hover{
     color:rgb(36, 36, 36)
 }
+
+/*Projects */
+
+.projects{
+    display:block;
+    
+}
+
+.project .container{
+    padding:20px;
+}
+.projects .project{
+    margin-top:60px;
+}
+
+.projects .project:nth-child(odd){
+    display:flex;
+    flex-direction: row-reverse;
+}
+.projects .project:nth-child(even){
+    display:flex;
+}
+.projects .project .about-project{
+    margin:30px;
+    flex-basis: 100%;
+}
+.projects .project .project-logo{
+    margin:30px;
+    flex-basis: 100%;
+}
+.projects .project .project-logo img{
+    transition: .5s;
+    width: 100%;
+    
+}
+.projects .project .project-logo img:hover{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+
 
 
 
