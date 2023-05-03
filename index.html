@@ -3,11 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Vivek</title>
-        <meta name="viewpot" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+        <!-- Google Font -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800"> 
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <!-- Font Awesome CSS -->
+		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <meta name="viewpot" content="width=device-width, initial-scale=1.0">
+
     </head>
 
     <!-- Body start here -->
@@ -33,34 +40,37 @@
 
         <!--Start of HERO section-->
         <div class="wrapper">
-
-            <section class="intro" id="home">
-                <img class ="intro__img" src="img/Vivek_crop.png" alt="a picture of Vivek">
+            <div class="intro">
                 <div class="section__head">
                     Hi, I am <br><strong><a class="shine">Vivek</a></strong>
-                <div>
-                
-            </section>
+                </div>
+                <div class="main-img">
+                    <img class ="intro__img" src="img/viv-pic.png" alt="a picture of Vivek">
+                </div>
+            </div>
+            
             <!--End of HERO section-->
 
             <!--Start of About me-->
-            <section class="about_me" >
+            <div class="about_me" >
                 
                 <div class="about_me_info" id="about">
-                    <p class ="about_text">I'm Vivek, currently pursuing my undergraduation in Computer Science from Jaypee university of Engineering and Technology, Guna.<br>
-                        Seeking a position to Utilize my skills and learn new things. As a fresher my ﬁrst motive is to gain experience in my skill and utilize it for a better world.
-                    </p>
                     <h1 class="about-back">ABOUT ME</h1>
+                    <p class ="about_text">Seeking a position to Utilize my skills and learn new things. As a fresher my first motive is to gain experience in my skill and utilize it for a better world.
+                    </p>
+                    
                 </div>
                 
-            </section>
+            </div>
             <!--End of About me-->
+
+
 
             <!--Start of Projects-->
 
                                         <!--color = ["#C1C6D7", "#FF99A8", "#DBCABD", "#FFBC99", "#E5B5B3"]-->
             <section class="projects" id="projects">
-                <h3>Projects</h3>
+                <h3 class="section-title">Projects</h3>
                 <div class="container">
                     <div class="project">
                         <div class="about-project">
@@ -68,7 +78,7 @@
                             <p>An interactive bot which will conduct interview and generate report and base on this result candidate will be shortlisted.</p>
                         </div>  
                         <div class="project-logo">
-                            <a href="#"><img src="img/interview-bot.jpg" alt="Interview bot" data-color="#66fcf1"></a>
+                            <a href="#"><img class="image-main" src="img/interview-bot.jpg" alt="Interview bot" data-color="#66fcf1"><img class="image-hover" src="img/bot.jpg" alt="Interview bot" data-color="#66fcf1"></a>
                         </div>  
                     </div>
 
@@ -80,7 +90,6 @@
                         <div class="project-logo">
                             <a href="https://mrs-vivek.herokuapp.com/">
                                 <img src="img/movie-recommender.jpg" alt="movie recommender" data-color="#FF99A8">
-                                <div class="text-over-image">View Website</div>
                             </a>
 
                         </div>  
@@ -102,47 +111,17 @@
             <!--End of Projects-->
 
 
-
-
-
-
             <!--Start of Skills section-->
-            <div class="my_skills" id="skills">
-                <div class="skill_container">
-                    <h3 class="skill_title">Skills</h3>
-                    <div class="skill_name">
-                        <span>C/C++</span>
-                        <span class="per">50%</span>
+            <div class="my-skills" id="skills">
+                    <h3 class="section-title">My Skills</h3>
+                    <div class="container">
+                    <img src="img/DARK-SKILLS.png" alt="my-skills">
                     </div>
-                    <div class="bar">
-                        <div class="c sbar"></div>
-                    </div><br>
-                    <div class="skill_name">
-                        <span>Python</span>
-                        <span class="per">40%</span>
-                    </div>
-                    <div class="bar">
-                        <div class="python sbar"></div>
-                    </div><br>
-                    <div class="skill_name">
-                        <span>HTML 5</span>
-                        <span class="per">45%</span>
-                    </div>
-                    <div class="bar">
-                        <div class="html sbar"></div>
-                    </div><br>
-                    <div class="skill_name">
-                        <span>CSS 3</span>
-                        <span class="per">35%</span>
-                    </div>
-                    <div class="bar">
-                        <div class="css sbar"></div>
-                    </div>
-                </div>
             </div>
             <!--End of Skills section-->
 
         </div>
+        
     <!--End  of Wrapper-->
 
         <!--Start of Footer-->
@@ -165,9 +144,6 @@
                 <a class="social__link" href="https://www.instagram.com/viv_ek43/">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="social__link" href="https://www.facebook.com/kumar.vivek.9083">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
                 <a class="social__link" href="https://www.youtube.com/channel/UCFPUDgD3yBxTYTFj-NuPlYA">
                     <i class="fab fa-youtube"></i>
                 </a>
@@ -177,18 +153,7 @@
                 <br><br>
             </div>
         </footer>
-        <!--Start of Footer-->
+        <!--End of Footer-->
 
-        <script>
-            $(document).ready(function(){
-                $('img').hover(function(){
-                $('body').css('background-color',$(this).data('color'));
-                },
-                function(){
-                    $('body').css('background-color','');
-                }
-                );       
-            });
-        </script>
     </body>
 </html>

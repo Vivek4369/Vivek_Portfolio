@@ -1,11 +1,20 @@
+:root{
+    --back:#010101;
+    --color:#ffffffda;
+}
 
 body{
-    background-color: #ffffff;
+    background-color: var(--back);
+    color: var(--color);
     margin: 0;
-    font-family: Verdana, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     transition: 1s;
+    /* color:rgb(0, 0, 0); */
 
 }
+
 section {
     padding: 5em 0em;
     position: relative;
@@ -24,9 +33,14 @@ img{
     display: block;
     max-width: 100%;
     min-width:200px;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 1em;
     transition: .5s;
 }
+.intro__img{
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
 
 img:hover{
     transition : transform 1.5s;
@@ -52,7 +66,6 @@ h1,h2,h3{
 .nav {
     position: relative;
 }
-
 .nav__head {
     float: left;
     font-size: 30px;
@@ -61,12 +74,48 @@ h1,h2,h3{
 .nav__head h2{
     color :rgba(46, 46, 46, 0.555)
 }
+
+.nav label{
+    width:50px;
+    height:20px;
+    position:relative;
+    display:block;
+    background: #ebebeb;
+    border-radius: 20px;
+    box-shadow:inser 0px 1px 2px rgba(0,0,0,0.4), inset opx -1px 2px rgba(255,255,255,.4);
+    cursor:pointer;
+}
+.nav label:after {
+    content:"";
+    width: 18px;
+    position:absolute;
+    top:1px;
+    left:1px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius:18px;
+    box-shadow:0px 1px 1px rgba(0,0,0,0.2);
+}
+input{
+    width:0;
+    height:0;
+    visibility:hidden;
+}
+input:checked + label{
+    background: #242424;
+}
+input:checked + label:after{
+    left:49px;
+    transform:translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label:checked + :root{
+    --back:#ffffff;
+    --color:#000000;
+}
+
 .nav__list {
     float: right;
 }
-
-
-
 .nav {
     align-content: center;
     margin-top: 0;
@@ -82,13 +131,13 @@ h1,h2,h3{
 }
 
 .nav__link{
-    color:rgba(0,0,0,.5);
+    color:rgba(256,256,256,.5);
     text-decoration: none;
     padding : 1em;
     transition : color .3s;
 }
 .nav__link:hover {
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
 }
 
 
@@ -97,6 +146,7 @@ h1,h2,h3{
 
 .intro{
     position:relative;
+    display:grid;
 }
 
 @media ( min-width: 600px) {
@@ -113,22 +163,6 @@ h1,h2,h3{
     
 }
 
-a.shine:hover {
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, rgb(0, 0, 0) 50%, rgba(0,0,0,.6) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 2s infinite;
-  }
-  
-  @-webkit-keyframes shine {
-    from {
-      -webkit-mask-position: 150%;
-    }
-    
-    to {
-      -webkit-mask-position: -50%;
-    }
-  }
-
 
 /* NAV */
 
@@ -137,33 +171,35 @@ a.shine:hover {
 /* ABOUT ME */
 
 .about_me {
+    margin-top: 200px;
+    margin-bottom: 200px;;
     position : relative; 
 }
 .about_me_info{
-    color:rgb(77, 77, 77);
+    /* color:rgb(77, 77, 77); */
     font-size:25px;
     padding:1em;
     
     position: relative;
 }
 .about_text {
-    width: 60%;
+    width: 70%;
     margin:0 auto;
     transition: color .3s;
 }
 .about_text:hover{
-    color:rgb(36, 36, 36)
+    /* color:rgb(36, 36, 36) */
 }
 
 .about_me .about-back{
-    position:absolute;
-    font-size: 100px;
+    font-size: 80px;
     width:100%;
     top:30%;
     text-align: center;
-    color:#ffffff;
-    text-shadow: 2px 2px 10px #55545447;
+    color:#000000;
+    text-shadow: 2px 2px 10px #b2b2b274;
     z-index:-1;
+    margin-bottom: 60px;;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -179,6 +215,11 @@ a.shine:hover {
     
     
 }
+
+
+/* video */
+
+
 /*Projects */
 
 .projects{
@@ -214,10 +255,10 @@ a.shine:hover {
     width: 100%;
     
 }
-.projects .project .project-logo img:hover{
+/* .projects .project .project-logo img:hover{
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-}
+} */
 .projects .project .project-logo{
     display:relative;
 }
@@ -238,63 +279,53 @@ a.shine:hover {
         margin-top:40px;
         font-size: 20px;
     }
+    .nav__list{
+    display:none;
+  }
     
     
 }
+.section-title{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;;
+}
 
+.project-logo {
+    position: relative;
+    width: 360px; /* can be omitted for a regular non-lazy image */
+    max-width: 100%;
+  }
+  .project-logo img.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit:cover;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .project-logo:hover img.image-hover {
+    opacity: 1;
+  }
 
 /*SKILLS*/
 
-.my_skills {
-    padding:20%;
-    place-items: center;
-    position: relative;
-}
-.skill_title {
-    text-align: center;
-    font-size: 30px;
-    color:rgba(0, 0, 0, 0.541);
-    margin-bottom: 1em;
-    position: relative;
-}
-.skill_container {
-    
+.my-skills{
+    padding:20px;
     align-items: center;
-    width: 100%;
-    position: relative;
-}
-.skill_name {
-    margin:0.5em;
-}
-.per {
-    float:right;
 }
 
-.bar {
-    position:relative;
-    width: 100%;
-    background-color: #ddd;
-    height: 1em;
-    border-radius: 1em;
-  }
-.sbar{
-    height:1em;
-    border-radius: 1em;
-    transition: transform .4s,background-color .4s;
-}
-.sbar:hover{
-    transform: scale(1.05);
-}
-.c:hover{ background-color: rgba(49, 243, 0, 0.911);}
-.python:hover{ background-color: rgb(0, 17, 255);}
-.html:hover{ background-color: rgb(255, 0, 0);}
-.css:hover{ background-color: rgba(50, 255, 238, 0.938);}
+.my-skills img{
 
-.c{ background-color: rgba(0, 0, 0, 0.7);  width:50%}
-.python{ background-color: rgba(0, 0, 0, 0.7);  width:40%}
-.html{ background-color: rgba(0, 0, 0, 0.7);  width:45%}
-.css{ background-color: rgba(0, 0, 0, 0.7);  width:35%}
+    max-height: 100%;
+    width:100%;
+}
 
+.my-skills .container{
+    padding: 40px;
+} 
 
 /* FOOTER */
 
@@ -319,7 +350,10 @@ footer {
 
     padding: 20px;
     text-decoration: none;
-    color: black;
+    color: white;
+}
+.social__link i{
+    font-size: large;
 }
 .fab {
     transition : transform .4s, color .4s;
@@ -327,5 +361,14 @@ footer {
 
 .social__link:hover .fab{
     color: white;
-    transform: scale(1.4);
+    transform: scale(1.2);
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px) {
+  .nav__list{
+    display:none;
+  }
+
 }
